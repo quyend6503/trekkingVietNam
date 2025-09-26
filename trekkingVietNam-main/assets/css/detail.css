@@ -1,0 +1,496 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    font-family: 'Poppins', sans-serif ;
+}
+header {
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    background-color: transparent!important;
+    height: 80px;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+header .navbar {
+    padding: 20px 0px;
+}
+
+.background-header .navbar {
+    padding: 10px 0px;
+}
+
+.background-header .navbar-nav .nav-link:hover,
+.background-header .navbar-nav .active>.nav-link,
+.background-header .navbar-nav .nav-link.active,
+.background-header .navbar-nav .nav-link.show,
+.background-header .navbar-nav .show>.nav-link {
+    color: #a4c639!important;
+}
+.navbar .navbar-brand {
+    float:  left;
+    margin-top: 12px;
+    outline: none;
+}
+.navbar .navbar-brand h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    -webkit-transition: all .3s ease 0s;
+    -moz-transition: all .3s ease 0s;
+    -o-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+}
+.navbar .navbar-brand h2 em {
+    font-style: normal;
+    font-size: 16px;
+}
+#navbarResponsive {
+    z-index: 999;
+}
+.navbar-collapse {
+    text-align: center;
+}
+.navbar .navbar-nav .nav-item {
+    margin: 0px 15px;
+}
+.navbar .navbar-nav a.nav-link {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: #fff;
+    transition: all 0.5s;
+    margin-top: 5px;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .active>.nav-link,
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link.show,
+.navbar .navbar-nav .show>.nav-link {
+    color: #a4c639;
+    border-bottom: 3px solid #a4c639;
+}
+.navbar .navbar-toggler-icon {
+    background-image: none;
+}
+.navbar .navbar-toggler {
+    border-color: #fff;
+    background-color: #fff;
+    height: 36px;
+    outline: none;
+    border-radius: 0px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.navbar .navbar-toggler-icon:after {
+    content: '\f0c9';
+    color: #a4c639;
+    font-size: 18px;
+    line-height: 26px;
+    font-family: 'FontAwesome';
+}
+
+.header-brand {
+    display: flex;
+    align-items: center; 
+    position: fixed; 
+    top: 10px;
+    left: 250px;
+    z-index: 11; /* TĂNG LÊN 11 để TRÊN navbar (z-index:10) */
+    gap: 10px; /* Khoảng cách giữa logo và text */
+    background: rgba(0, 0, 0, 0.8); /* Thêm nền bán trong suốt (tùy chọn) để chữ nổi bật hơn nếu cần */
+    padding: 5px 10px; /* Padding nhẹ cho container */
+    border-radius: 5px; /* Bo góc  */
+}
+
+/* Hero Section - Background image dưới header */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Chiều cao có thể điều chỉnh */
+    background-image: url('../images/taxua1.png'); /* Đường dẫn tương đối từ CSS đến ảnh. Thay nếu cần */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 20px; /* Khoảng cách với phần nội dung bên dưới */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Lớp overlay tối để dễ đọc text nếu cần */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 230px 20px 0;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2em;
+    }
+    
+    .hero-content p {
+        font-size: 1em;
+    }
+}
+
+.navbar{
+    width: 100%;
+    padding: 0 ;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    background-color:rgb(0, 0, 0);    
+    font-weight: bold ;
+}
+.Logo{
+      background: transparent !important; 
+       display: block;
+       max-width: 100px; 
+       height: auto;
+       position: fixed; 
+       top: 0px; 
+       left: 20px; 
+       z-index: 5; /* Dưới navbar nhưng trên nội dung */
+}
+.brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px; 
+    font-weight: bold;
+    color: #f8efef; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    white-space: nowrap; /* Không xuống dòng */
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: hsl(0, 3%, 46%);
+    padding: 15px;
+    display: block; 		
+    padding: .5em 1em; 	
+    margin: .5em; 
+    font-family:'Open Sans', sans-serif;
+    
+}
+nav ul li a:visited {
+  color: #f2f0ee;
+}
+
+nav ul li a:hover {
+    color: rgb(105, 58, 5);
+}
+.Photos{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 cột */
+    grid-template-rows: 1fr 1fr;   /* 2 hàng */
+    max-width: 800px;
+    margin-left: 50px;
+    gap:0px;
+}
+.Photos img{
+    width: 90%;                      
+    height: auto;                     
+    border-radius: 10px;    
+    z-index: 1;         
+}
+.Photos img:hover{
+    transform: scale(1.10);
+    z-index: 10;  
+    
+}
+@media (max-width: 992px) {
+    .Logo {
+        max-width: 80px;
+    }
+  .ct {
+    flex-direction: column; 
+    align-items: center;   
+  }
+
+  .Photos {
+    grid-template-columns: 1fr 1fr; 
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .ct .content {
+    width: 90%; 
+    margin: 20px auto;
+  }                         
+  .para2{
+    flex-direction: column; 
+    align-items: center;
+  }
+  .advanced img{
+    max-width: 100%;
+    margin-top: 20px;
+  }
+}
+.ct .content{
+    width: 40%;        
+    padding: 20px;               
+    margin: 20px 50px auto;
+}
+
+.ct {
+    display: flex;
+}
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.info-row:last-child {
+    border-bottom: none;
+    
+}
+.info-row span {
+    font-weight: 500;
+}   
+.highlight {
+    font-weight: 800;
+    color: #333;
+}
+.highlight .old_price{
+    font-size: 15px;
+    color: #999;
+    text-decoration: line-through;
+}
+.highlight .new_price{
+    color:red;
+    font-weight: bold;
+    font-size: 27px;
+}
+.Tickets{
+    width: 100%;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 30px;
+    background-color: rgb(241, 148, 72);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.Tickets:hover{
+    background: #5f8196;
+}
+
+.advanced img{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto 50px;
+}
+.divider {
+  border: none;              
+  height: 2px;               
+  background-color: #ccc;    
+  margin: 40px auto;         
+  width: 60%;                
+  border-radius: 5px;
+}
+.para2{
+    display: flex;
+    
+}
+.features{
+    max-width: 1000px;
+    margin: 10px 50px;
+    padding: 0 20px;
+}
+.features h2{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
+}
+.features-container{
+    font-size: 16px;
+    gap: 12px 40px;
+    flex-wrap: wrap;
+    display: flex;
+}
+.feature { 
+  line-height: 1.6;
+  position: relative;
+  padding-left: 25px;
+  font-family: 'Times New Roman', Times, serif ;
+  font-size: 17px;
+}
+.description{
+  max-width: 750px;
+  margin: 0 10px 40px 50px;
+  line-height: 2;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.timeline {
+  max-width: 800px;
+  margin-bottom: 70px;
+  margin:auto;
+}
+
+.day {
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #e5ba79;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.day h3 {
+  margin: 0;
+  color: #dd9f19;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.day p {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #000;
+}
+.footer-brand {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    margin-bottom: 10px; 
+}
+.footer-logo {
+    background: transparent !important;
+    display: block;
+    max-width: 250px; 
+    height: auto;
+}
+.footer-brand-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+    color: #fff !important; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.footer {
+  background: #222;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer p,
+.footer a {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #f39c12;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+
+
+
